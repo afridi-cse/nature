@@ -34,7 +34,7 @@ const getImages = (query) => {
     fetch(`https://pixabay.com/api/?key=${KEY}=${query}&image_type=photo&pretty=true`)
         .then(response => response.json())
         .then(data => showImages(data.hits))
-        .catch(displayError("Your searched food is not available in our cart. Please Try Again !!!"));
+        .catch(displayError("Your searched Item is not available in our cart. Please Try Again !!!"));
 }
 
 // enter key button
@@ -144,7 +144,7 @@ sliderBtn.addEventListener('click', function() {
     if (document.getElementById('duration').value >= 0) {
         createSlider()
     } else {
-        alert('Negative and Zero duration are not allowed.')
+        alert('Negative duration are not allowed.')
     }
 
 });
